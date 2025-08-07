@@ -3,6 +3,7 @@ REPOSITORY := haruhi913/$(NAME)
 TAG := 20250807
 GOOS := linux
 GOARCH := amd64
+CGO_ENABLED := 0
 
 .PHONY: build test image-build image-push clean
 build:
