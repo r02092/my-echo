@@ -6,7 +6,7 @@ GOARCH := amd64
 
 .PHONY: build test image-build image-push clean
 build:
-	GOOS=$(GOOS) GOARCH=$(GOARCH) go build -o _output/$(NAME) .
+	GOOS=$(GOOS) GOARCH=$(GOARCH) CGO_ENABLED=0 go build -o _output/$(NAME) .
 
 test:
 	go test -v
